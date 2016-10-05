@@ -23,12 +23,25 @@ $(document).ready(function () {
       'img/squirtle.jpg',
       'img/venusaur.jpg',
       'img/venusaur.jpg',
+      'img/jirachi.jpg',
+      'img/jirachi.jpg',
+      'img/oddish.jpg',
+      'img/oddish.jpg',
+      'img/pikachu.jpg',
+      'img/pikachu.jpg',
+      'img/diancie.jpg',
+      'img/diancie.jpg',
+      'img/machoke.jpg',
+      'img/machoke.jpg',
+      'img/ninetales.jpg',
+      'img/ninetales.jpg',
     ],
     // games's method init() definition
     init: function () {
       $('.play').addClass('hidden')
       $('.reset').removeClass('hidden')
       $('.timer').removeClass('hidden')
+      $('.clicks').removeClass('hidden')
       this.x = setInterval(this.updateTime.bind(this), 1000)
       $('.reset').on('click', function () {
         // location object for reloading
@@ -41,12 +54,14 @@ $(document).ready(function () {
 
     updateTime: function () {
       this.seconds = this.seconds + 1
+      // console.log(this.seconds )
+
       $('.timer').text('Time: ' + this.seconds.toString() + 's')
       $('.timer').id = 'timer'
-      if (this.seconds === 10000) {
-        alert('You lost!')
+      if (this.seconds === 10) {
+        $('.result').html('<h1>You lost!</h1>')
         clearInterval(this.x)
-        location.reload()
+        // location.reload()
       }
     },
     shuffle: function () {
@@ -91,6 +106,8 @@ $(document).ready(function () {
         // .addClass('selected')
         $(this).html('<img src= ' + $(this).data('cardValue') +'>').addClass('selected')
         game.clicks = game.clicks + 1
+        // console.log(game.clicks)
+        $('.clicks').text('Clicks: ' + game.clicks)
           // everythime, it is clicked, we need to check match
         game.checkMatch (game.clicks)
       })
@@ -118,7 +135,7 @@ $(document).ready(function () {
       checkWin: function () {
         console.log('seconds are: ' + this.seconds);
         if ($('.unmatched').length === 0) {
-          $('.message').html('<h1>You won!</h1>')
+          $('.result').html('<h1>You rock!</h1>')
           console.log(this.x);
           clearInterval(this.x)
         }
