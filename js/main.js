@@ -58,7 +58,7 @@ $(document).ready(function () {
 
       $('.timer').text('Time: ' + this.seconds.toString() + 's')
       $('.timer').id = 'timer'
-      if (this.seconds === 10) {
+      if (this.seconds === 600) {
         $('.result').html('<h1>You lost!</h1>')
         clearInterval(this.x)
         // location.reload()
@@ -128,7 +128,7 @@ $(document).ready(function () {
               $('.selected').each(function() {
                 $(this).html('').removeClass('selected')
               })
-            }, 50 )
+            }, 100)
         }
       }
     },
