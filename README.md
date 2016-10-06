@@ -23,11 +23,9 @@ To find all the pairs of the same Pokemon creatures in the least no. of clicks a
 5.  Card Boxes appear.
 6.  Shuffle the cards.
 7.  Assign the cards to html elements: Add attributes.
-8.  Add event listener for each boxes. When clicked: for each card: add elements and atrribute class "selected". Count the number
-    of clicks. 
-9.  After clicking on boxes, check for match: if the number of clicks is even: if the 2 selected cards match, remove classes 'selected'
-    and "unmatched" and remove the cards. Then check for a win. Else just remove classes"selected". 
-10. If there is a win, print'You rock' and pause the time. 
+8.  Add event listener for each boxes. When clicked: for each card: add elements and atrribute class "selected". Count the       number of clicks. 
+9.  After clicking on boxes, check for match: if the number of clicks is even: if the 2 selected cards match, remove classes     'selected' and "unmatched" and remove the cards. Then check for a win. Else just remove classes"selected" and remove the     elements.
+10. If there is a win, print "You rock" and pause the time.   
    
 
 <h2>Credits</h2>
