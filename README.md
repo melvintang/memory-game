@@ -2,12 +2,10 @@
 <p>My 1st project for General Assembly WDI</p>
 
 <h2>Project link:</h2>
+https://melvintang.github.io/memory-game/
 
-http://ivanyapeter.github.io/WDI-Project1-Memory_Game/
-
-<h2>Overview:</h2>
-
-A simple Pokemon memory game with time constraint and number of clicks per game.
+<h2>User Story:</h2>
+To find all the pairs of the same Pokemon creatures in the least no. of clicks and in the shortest time.
 
 <h2>Goals</h2>
 1. To use objects and functions effectively in Javascript 
